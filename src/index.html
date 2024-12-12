@@ -3,7 +3,67 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary Meta Tags -->
+    <title>PatientGrid - Medical Software for Patient Communication</title>
+    <meta
+      name="title"
+      content="PatientGrid - Medical Software for Patient Communication"
+    />
+    <meta
+      name="description"
+      content="Improve patient experience and streamline healthcare team communication with PatientGrid. Attract, retain, and provide exceptional patient care through our innovative communication platform."
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://patient-grid-landing-page.vercel.app/"
+    />
+    <meta
+      property="og:title"
+      content="PatientGrid - Medical Software for Patient Communication"
+    />
+    <meta
+      property="og:description"
+      content="Improve patient experience and streamline healthcare team communication with PatientGrid. Attract, retain, and provide exceptional patient care through our innovative communication platform."
+    />
+    <meta property="og:image" content="./patient-grid-landing-page.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://patient-grid-landing-page.vercel.app/"
+    />
+    <meta
+      property="twitter:title"
+      content="PatientGrid - Medical Software for Patient Communication"
+    />
+    <meta
+      property="twitter:description"
+      content="Improve patient experience and streamline healthcare team communication with PatientGrid. Attract, retain, and provide exceptional patient care through our innovative communication platform."
+    />
+    <meta property="twitter:image" content="./patient-grid-landing-page.png" />
+
+    <!-- Keywords -->
+    <meta
+      name="keywords"
+      content="medical software, patient communication, healthcare platform, patient retention, team collaboration, medical inbox, patient management"
+    />
+
+    <!-- Author -->
     <meta name="author" content="Dhrubajyoti Bhattacharjee" />
+
+    <!-- Robots -->
+    <meta name="robots" content="index, follow" />
+
+    <!-- Canonical Link -->
+    <link
+      rel="canonical"
+      href="https://patient-grid-landing-page.vercel.app/"
+    />
 
     <!-- Favicon -->
     <link
@@ -23,13 +83,11 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-
-    <title>PatientGrid</title>
   </head>
 
   <body class="font-poppins text-secondary">
     <!-- Header -->
-    <div class="bg-custom-gray fixed left-0 top-0 right-0">
+    <div class="bg-custom-gray fixed left-0 top-0 right-0 z-[2]">
       <header class="wrapper font-medium p-4 flex justify-between items-center">
         <!-- Logo -->
         <a href="#" class="flex items-center gap-2">
@@ -116,10 +174,10 @@
     <!-- Mobile menu -->
     <div
       data-mobile-menu-overlay
-      class="hidden bg-black bg-opacity-50 fixed inset-0"
+      class="hidden bg-black bg-opacity-50 fixed inset-0 z-[3]"
     >
       <aside
-        class="w-[80%] h-screen sm:w-[60%] hidden bg-white p-4 rounded-md shadow-md flex-col justify-between items-start absolute right-0"
+        class="w-[80%] h-screen sm:w-[60%] hidden bg-white p-4 rounded-md shadow-md flex-col justify-between items-start absolute top-0 right-0 z-[4]"
         data-mobile-menu
       >
         <!-- Close button -->
@@ -181,7 +239,7 @@
 
         <!-- Mobile actions -->
         <div
-          class="flex flex-col items-start gap-3 sm:gap-0 sm:flex-row sm:items-center sm:justify-between"
+          class="flex flex-col items-start gap-3 sm:flex-row sm:items-center"
         >
           <a
             href="#"
@@ -264,7 +322,7 @@
 
       <!-- Trial section -->
       <section
-        class="wrapper bg-custom-light-blue rounded-[30px] px-8 py-12 mt-[2rem] overflow-hidden flex flex-col lg:flex-row items-center gap-4 relative z-[-1] before:absolute before:w-[150px] before:sm:w-[200px] before:h-[150px] before:sm:h-[200px] before:rounded-full before:bg-primary before:left-0 before:top-0 before:translate-x-[-45%] before:translate-y-[-30%] after:absolute after:w-[150px] after:sm:w-[200px] after:h-[150px] after:sm:h-[200px] after:rounded-full after:bg-primary after:right-0 after:bottom-0 after:translate-x-[45%] after:translate-y-[30%]"
+        class="wrapper bg-custom-light-blue rounded-[30px] px-8 py-12 mt-[2rem] overflow-hidden flex flex-col lg:flex-row items-center gap-4 relative z-[1] before:absolute before:w-[150px] before:sm:w-[200px] before:h-[150px] before:sm:h-[200px] before:rounded-full before:bg-primary before:left-0 before:top-0 before:translate-x-[-45%] before:translate-y-[-30%] after:absolute after:w-[150px] after:sm:w-[200px] after:h-[150px] after:sm:h-[200px] after:rounded-full after:bg-primary after:right-0 after:bottom-0 after:translate-x-[45%] after:translate-y-[30%]"
       >
         <img src="./assets/trial-img.png" alt="" />
 
@@ -297,14 +355,17 @@
           class="border-b border-white pb-4 grid grid-cols-1 gap-8 justify-items-center md:justify-items-start lg:justify-items-center lg:gap-0 md:grid-cols-2 lg:grid-cols-3 lg:justify-between items-center"
         >
           <div class="grid justify-items-center md:justify-items-start gap-3">
-            <div class="flex items-center gap-4">
-              <img
-                src="./assets/logo-white.png"
-                alt="Logo"
-                class="w-[1.625rem]"
-              />
+            <!-- Logo -->
+            <div>
+              <a href="#" class="flex items-center gap-4">
+                <img
+                  src="./assets/logo-white.png"
+                  alt="Logo"
+                  class="w-[1.625rem]"
+                />
 
-              <span class="text-[1.5rem] font-medium">patientgrid</span>
+                <span class="text-[1.5rem] font-medium">patientgrid</span>
+              </a>
             </div>
 
             <p class="text-center md:text-left">
@@ -312,6 +373,7 @@
               eiusmod tempor.
             </p>
 
+            <!-- Socials -->
             <div class="flex items-center gap-4">
               <a
                 href="#"
@@ -339,6 +401,7 @@
             </div>
           </div>
 
+          <!-- Contact info -->
           <div class="grid gap-4">
             <div class="flex items-center gap-2">
               <img
@@ -368,6 +431,7 @@
             </div>
           </div>
 
+          <!-- Newsletter -->
           <form class="grid gap-4">
             <label
               for="email"
@@ -407,14 +471,36 @@
           </form>
         </div>
 
+        <!-- Navigation -->
         <nav class="border-b border-white pb-4">
           <ul class="flex justify-center gap-8">
-            <li>Products</li>
-            <li>Plans</li>
-            <li>More</li>
+            <li>
+              <a
+                href="#"
+                class="transition-opacity hover:opacity-60 focus-visible:opacity-60"
+                >Products</a
+              >
+            </li>
+
+            <li>
+              <a
+                href="#"
+                class="transition-opacity hover:opacity-60 focus-visible:opacity-60"
+                >Plans</a
+              >
+            </li>
+
+            <li>
+              <a
+                href="#"
+                class="transition-opacity hover:opacity-60 focus-visible:opacity-60"
+                >More</a
+              >
+            </li>
           </ul>
         </nav>
 
+        <!-- Copyright -->
         <p class="text-center capitalize">
           &copy; Copyright, <span data-copyright-year></span>. All rights
           reserved.
