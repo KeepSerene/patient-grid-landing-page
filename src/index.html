@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en" class="text-[100%]">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Dhrubajyoti Bhattacharjee" />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      href="./assets/logo.svg"
+      sizes="any"
+      type="image/svg+xml"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./output.css" />
+
+    <!-- Poppins google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>PatientGrid</title>
+  </head>
+
+  <body class="font-poppins text-secondary">
+    <!-- Header -->
+    <div class="bg-custom-gray fixed left-0 top-0 right-0">
+      <header class="wrapper font-medium p-4 flex justify-between items-center">
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-2">
+          <img src="./assets/logo.svg" alt="Logo" class="w-[1.625rem]" />
+
+          <span class="text-primary">patientgrid</span>
+        </a>
+
+        <!-- Desktop nav links -->
+        <nav class="hidden md:block">
+          <ul class="flex items-center gap-3">
+            <li>
+              <a
+                href="#"
+                class="hover:text-bg-primary focus-visible:text-bg-primary transition-colors"
+                >Products</a
+              >
+            </li>
+
+            <li>
+              <a
+                href="#"
+                class="hover:text-bg-primary focus-visible:text-bg-primary transition-colors"
+                >Plans</a
+              >
+            </li>
+
+            <li>
+              <button
+                type="button"
+                class="flex items-center hover:text-bg-primary focus-visible:text-bg-primary transition-colors"
+              >
+                <span>More</span>
+
+                <img
+                  src="./assets/arrow-drop-down-icon.png"
+                  alt="Drop down menu icon"
+                />
+              </button>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Header actions -->
+        <div class="hidden md:flex items-center gap-3">
+          <a
+            href="#"
+            class="hover:text-bg-primary focus-visible:text-bg-primary transition-colors"
+            >Login</a
+          >
+
+          <a
+            href="#"
+            class="bg-primary text-white rounded-3xl px-3 py-2 transition-opacity hover:opacity-50 focus-visible:opacity-50"
+            >Request a demo</a
+          >
+        </div>
+
+        <!-- Hamburger button -->
+        <button
+          type="button"
+          aria-label="Click to open mobile menu"
+          class="md:hidden"
+          data-hamburger-btn
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+        </button>
+      </header>
+    </div>
+
+    <!-- Mobile menu -->
+    <div
+      data-mobile-menu-overlay
+      class="hidden bg-black bg-opacity-50 fixed inset-0"
+    >
+      <aside
+        class="w-[80%] h-screen sm:w-[60%] hidden bg-white p-4 rounded-md shadow-md flex-col justify-between items-start absolute right-0"
+        data-mobile-menu
+      >
+        <!-- Close button -->
+        <button
+          type="button"
+          aria-label="Click to close mobile menu"
+          data-close-btn
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18 18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+
+        <!-- Mobile nav links -->
+        <nav>
+          <ul class="flex flex-col gap-3">
+            <li>
+              <a
+                href="#"
+                class="hover:text-bg-primary focus-visible:text-bg-primary transition-colors"
+                >Products</a
+              >
+            </li>
+
+            <li>
+              <a
+                href="#"
+                class="hover:text-bg-primary focus-visible:text-bg-primary transition-colors"
+                >Plans</a
+              >
+            </li>
+
+            <li>
+              <button
+                type="button"
+                class="flex items-center hover:text-bg-primary focus-visible:text-bg-primary transition-colors"
+              >
+                <span>More</span>
+
+                <img
+                  src="./assets/arrow-drop-down-icon.png"
+                  alt="Drop down menu icon"
+                />
+              </button>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Mobile actions -->
+        <div
+          class="flex flex-col items-start gap-3 sm:gap-0 sm:flex-row sm:items-center sm:justify-between"
+        >
+          <a
+            href="#"
+            class="hover:text-bg-primary focus-visible:text-bg-primary transition-colors"
+            >Login</a
+          >
+
+          <a href="#" class="bg-primary text-white rounded-3xl px-3 py-2"
+            >Request a demo</a
+          >
+        </div>
+      </aside>
+    </div>
+
+    <!-- Main -->
+    <main>
+      <!-- Home section -->
+      <!-- Margin top = Header height + 2rem -->
+      <section class="wrapper mt-[calc(64.74px+2rem)] grid gap-3 text-center">
+        <h1
+          class="text-primary text-[2rem] sm:text-[3rem] md:text-[4rem] lg:text-[4.375rem] font-medium capitalize"
+        >
+          Medical software to attract and
+          <span class="font-bold">retain patients</span>
+        </h1>
+
+        <p>
+          Patientgrid's communication platform helps improve patient experience
+          while staff hours.
+        </p>
+
+        <a href="#" class="flex gap-2 justify-center items-center">
+          <span
+            class="text-primary font-medium transition-colors hover:text-bg-primary focus-visible:text-bg-primary"
+            >Start for free</span
+          >
+
+          <img
+            src="./assets/right-arrow-action-btn.png"
+            alt="Right arrow"
+            class="w-[30px]"
+          />
+        </a>
+      </section>
+
+      <!-- Hero section -->
+      <div
+        class="mt-[2rem] bg-[url('./assets/hero-gradient-bg.png')] bg-cover bg-no-repeat"
+      >
+        <div class="wrapper">
+          <img src="./assets/hero.png" alt="Hero banner" />
+        </div>
+      </div>
+
+      <!-- Features section -->
+      <div class="wrapper mt-[2rem] grid justify-center gap-4">
+        <img src="./assets/feature1.png" alt="Feature 1" />
+        <img src="./assets/feature2.png" alt="Feature 2" />
+        <img src="./assets/feature3.png" alt="Feature 3" />
+      </div>
+
+      <!-- Seamless collaboration section -->
+      <section
+        class="wrapper bg-custom-light-blue rounded-[30px] px-8 py-12 mt-[2rem] flex flex-col-reverse lg:flex-row items-center gap-4"
+      >
+        <div class="text-center lg:text-left grid gap-4">
+          <h2 class="text-primary text-[1.5rem] md:text-[2.5rem] font-medium">
+            Seamless collaboration for healthcare teams
+          </h2>
+
+          <p class="lg:max-w-[40ch]">
+            With shared inboxes, any team member can resolve the team's pending
+            tasks. Individual staff member don't get overwhelmed and patients
+            are always take care of.
+          </p>
+        </div>
+
+        <img src="./assets/seamless-collab.png" alt="" class="" />
+      </section>
+
+      <!-- Trial section -->
+      <section
+        class="wrapper bg-custom-light-blue rounded-[30px] px-8 py-12 mt-[2rem] overflow-hidden flex flex-col lg:flex-row items-center gap-4 relative z-[-1] before:absolute before:w-[150px] before:sm:w-[200px] before:h-[150px] before:sm:h-[200px] before:rounded-full before:bg-primary before:left-0 before:top-0 before:translate-x-[-45%] before:translate-y-[-30%] after:absolute after:w-[150px] after:sm:w-[200px] after:h-[150px] after:sm:h-[200px] after:rounded-full after:bg-primary after:right-0 after:bottom-0 after:translate-x-[45%] after:translate-y-[30%]"
+      >
+        <img src="./assets/trial-img.png" alt="" />
+
+        <div class="grid gap-4">
+          <h2
+            class="lg:max-w-[25ch] text-primary text-[1.5rem] md:text-[2.5rem] font-medium text-center"
+          >
+            We work on a month-to-month basis, try for free with no commitments
+          </h2>
+
+          <p class="max-w-[60ch] text-center mx-auto">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+
+          <button
+            type="button"
+            class="bg-btn-secondary text-white font-medium capitalize justify-self-center rounded-3xl px-[1rem] py-[0.5rem] transition-opacity hover:opacity-50 focus-visible:opacity-50"
+          >
+            14 free trial
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white mt-[2rem]">
+      <div class="px-8 py-12 grid gap-4">
+        <div
+          class="border-b border-white pb-4 grid grid-cols-1 gap-8 justify-items-center md:justify-items-start lg:justify-items-center lg:gap-0 md:grid-cols-2 lg:grid-cols-3 lg:justify-between items-center"
+        >
+          <div class="grid justify-items-center md:justify-items-start gap-3">
+            <div class="flex items-center gap-4">
+              <img
+                src="./assets/logo-white.png"
+                alt="Logo"
+                class="w-[1.625rem]"
+              />
+
+              <span class="text-[1.5rem] font-medium">patientgrid</span>
+            </div>
+
+            <p class="text-center md:text-left">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor.
+            </p>
+
+            <div class="flex items-center gap-4">
+              <a
+                href="#"
+                aria-label="Click to visit our Facebook page"
+                title="Facebook"
+              >
+                <img src="./assets/fb-icon.png" alt="Facebook icon" />
+              </a>
+
+              <a
+                href="#"
+                aria-label="Click to visit our Twitter page"
+                title="Twitter"
+              >
+                <img src="./assets/twitter-icon.png" alt="Twitter icon" />
+              </a>
+
+              <a
+                href="#"
+                aria-label="Click to visit our Instagram page"
+                title="Instagram"
+              >
+                <img src="./assets/ig-icon.png" alt="Instagram icon" />
+              </a>
+            </div>
+          </div>
+
+          <div class="grid gap-4">
+            <div class="flex items-center gap-2">
+              <img
+                src="./assets/phone-icon.png"
+                alt="Phone icon"
+                class="w-[1.25rem] h-[1.25rem]"
+              />
+              <p>+91-8853923455</p>
+            </div>
+
+            <div class="flex items-center gap-2">
+              <img
+                src="./assets/whatsapp-icon.png"
+                alt="WhatsApp icon"
+                class="w-[1.25rem] h-[1.25rem]"
+              />
+              <p>+91-4567895478</p>
+            </div>
+
+            <div class="flex items-center gap-2">
+              <img
+                src="./assets/email-icon.png"
+                alt="Mail icon"
+                class="w-[1.25rem] h-[1.25rem]"
+              />
+              <p>patientgrid@gmail.com</p>
+            </div>
+          </div>
+
+          <form class="grid gap-4">
+            <label
+              for="email"
+              class="font-medium text-center md:text-left capitalize"
+              >Subscribe newsletter</label
+            >
+
+            <div class="w-max relative">
+              <input
+                type="email"
+                id="email"
+                placeholder="Email"
+                class="rounded-3xl px-4 py-[0.5rem]"
+              />
+
+              <button
+                type="submit"
+                aria-label="Click to subscribe to our newsletter"
+                class="w-[2.5rem] h-[2.5rem] bg-btn-secondary rounded-full p-4 transition-opacity hover:opacity-50 focus-visible:opacity-50 absolute top-0 right-0"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6 absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m8.25 4.5 7.5 7.5-7.5 7.5"
+                  />
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <nav class="border-b border-white pb-4">
+          <ul class="flex justify-center gap-8">
+            <li>Products</li>
+            <li>Plans</li>
+            <li>More</li>
+          </ul>
+        </nav>
+
+        <p class="text-center capitalize">
+          &copy; Copyright, <span data-copyright-year></span>. All rights
+          reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
