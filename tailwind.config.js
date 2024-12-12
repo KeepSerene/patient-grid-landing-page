@@ -16,6 +16,7 @@ module.exports = {
         secondary: "rgba(40, 40, 40, 0.7)",
         "bg-primary": "rgba(42, 8, 150)",
         "bg-secondary": "rgb(135, 206, 250)",
+        "btn-bg-secondary": "rgb(68, 130, 194)",
       },
 
       fontFamily: {
